@@ -1,0 +1,13 @@
+<?php include('include/nav.php'); ?>
+<div class="col-sm-3 col-md-2 sidebar">
+  <?php foreach ($sidebar as $item => $value) { ?>
+  <ul class="nav nav-sidebar">
+    <?php foreach ($value as $item => $value) { ?>
+    <?php
+      $current = ($sactive == $item) ? 'active' : '';
+    ?>
+    <li class="<?php echo $current; ?>"><a href="<?php echo $value['url']; ?>"><span class="<?php echo $value['icon']; ?>"></span> <?php echo $value['title']; ?></a></li>
+    <?php } ?>
+  </ul>
+  <?php } ?>
+</div>
